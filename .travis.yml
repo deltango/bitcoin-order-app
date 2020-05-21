@@ -16,7 +16,9 @@ branches:
    - development
 before_script:
   - npm install -g @angular/cli
-  - npm install -g now
+  - npm update
+  - npm audit fix
+  - ng lint
 script:
   - ng build --prod --base-href https://deltango.github.io/bitcoin-order-app/
 
